@@ -31,6 +31,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java }}
+          check-latest: true
       - name: Poke SSL
         run: |
           java -version
