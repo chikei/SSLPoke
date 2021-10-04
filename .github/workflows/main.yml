@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ '8', '9' ]
+        java: [ '8', '9', '11' ]
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -31,7 +31,6 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java }}
-          check-latest: true
       - name: Poke SSL
         run: |
           java -version
